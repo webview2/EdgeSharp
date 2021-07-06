@@ -1,0 +1,22 @@
+<Project>
+  <PropertyGroup>
+    <ProductVersion>0.9.0</ProductVersion>
+    <AssemblyVersion>0.9.0</AssemblyVersion>
+    <FileVersion>0.9.0</FileVersion>
+    <Version>0.9.0</Version>
+    <Product>EdgeSharp</Product>
+    <Authors>EdgeSharp Authors</Authors>
+    <Company>EdgeSharp Projects</Company>
+    <Copyright>Copyright © EdgeSharp Projects</Copyright>
+    <RepositoryUrl>https://github.com/edgesharp/EdgeSharp/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/edgesharp/EdgeSharp/</PackageProjectUrl>
+    <PackageTags>EdgeSharp Edge WebView2 Chromium HTML5 Desktop Win32 WinForms WPF</PackageTags>
+    <Description>EdgeSharp Win32 .NET WebView2 hosting library. Requires Microsoft.Web.WebView2 minimum SDK Version 1.0.865-prerelease.</Description>
+    <PackageIcon>edgesharp.png</PackageIcon>
+    <PackageReleaseNotes>
+      First release.
+    </PackageReleaseNotes>
+    <RepositoryType>Github Repository</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+</Project>

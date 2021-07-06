@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EdgeSharp.Wpf</name>
+    </assembly>
+    <members>
+        <member name="T:EdgeSharp.Wpf.WpfStartup">
+            <summary>
+            The default implementation of Wpf <see cref="T:EdgeSharp.Core.StartupBase"/> class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Wpf.WpfStartup.#ctor(EdgeSharp.Core.ICoreServices)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Wpf.WpfStartup"/>.
+            </summary>
+            <param name="coreServices">Wpf EdgeSahrp core services registration class.</param>
+        </member>
+    </members>
+</doc>

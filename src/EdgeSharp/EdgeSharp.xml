@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EdgeSharp</name>
+    </assembly>
+    <members>
+        <member name="T:EdgeSharp.AppBuilder">
+            <summary>
+            EdgeSharp Win32 application builder.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.AppBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.Create">
+            <summary>
+            Create the <see cref="T:EdgeSharp.AppBuilder"/> instance.
+            </summary>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.UseServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Allows the developer to use an external <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            Usually custom <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> is not needed. One is provided for the devloper.
+            </summary>
+            <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.UseServiceProviderFactory(EdgeSharp.Core.ServiceProviderFactory)">
+            <summary>
+            Allows the developer to use an external <see cref="T:EdgeSharp.Core.ServiceProviderFactory"/>.
+            </summary>
+            <param name="serviceProviderFactory">A custom The <see cref="T:EdgeSharp.Core.ServiceProviderFactory" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.UseConfig``1(EdgeSharp.Core.Configuration.IConfiguration)">
+            <summary>
+            Allows the developer to use an external EdgeSahrp <see cref="T:EdgeSharp.Core.Configuration.IConfiguration"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:EdgeSharp.Core.Configuration.IConfiguration" /> is provided, that is what is used.
+            If the instance of <see cref="T:EdgeSharp.Core.Configuration.IConfiguration" /> is not provided, the of TServive is used to create one.
+            </remarks>
+            <typeparam name="TService">A derived type of <see cref="T:EdgeSharp.Core.Configuration.IConfiguration" /> definition. </typeparam>
+            <param name="config">The <see cref="T:EdgeSharp.Core.Configuration.IConfiguration" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.UseWindow``1(EdgeSharp.Core.IBrowserWindow)">
+            <summary>
+            Allows the developer to use an external <see cref="T:EdgeSharp.Core.IBrowserWindow"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:EdgeSharp.Core.IBrowserWindow" /> is provided, that is what is used.
+            If the instance of <see cref="T:EdgeSharp.Core.IBrowserWindow" /> is not provided, the of TServive is used to create one.
+            </remarks>
+            <typeparam name="TService">A derived type of <see cref="T:EdgeSharp.Core.IBrowserWindow" /> definition. </typeparam>
+            <param name="browserWindow">The <see cref="T:EdgeSharp.Core.IBrowserWindow" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.UseApp``1(EdgeSharp.Core.IStartup)">
+            <summary>
+            Allows the developer to use an external <see cref="T:EdgeSharp.Core.IStartup"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:EdgeSharp.Core.IStartup" /> is provided, that is what is used.
+            If the instance of <see cref="T:EdgeSharp.Core.IStartup" /> is not provided, the of TApp is used to create one.
+            </remarks>
+            <typeparam name="TApp">A derived type of <see cref="T:EdgeSharp.Core.IStartup" /> definition. </typeparam>
+            <param name="app">The <see cref="T:EdgeSharp.Core.IStartup" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.UseErrorHandler``1(EdgeSharp.Core.Network.IErrorHandler)">
+            <summary>
+            Allows the developer to use an external <see cref="T:EdgeSharp.Core.Network.IErrorHandler"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> is provided, that is what is used.
+            If the instance of <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> is not provided, the of TServive is used to create one.
+            </remarks>
+            <typeparam name="TService">A derived type of <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> definition. </typeparam>
+            <param name="errorHandler">The <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.Build">
+            <summary>
+            Builds and create the services.
+            </summary>
+            <returns>Instance of the <see cref="T:EdgeSharp.AppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.AppBuilder.Run(System.String[])">
+            <summary>
+            Runs the application after build.
+            </summary>
+            <param name="args">Command line arguments.</param>
+        </member>
+        <member name="M:EdgeSharp.Browser.BrowserWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="T:EdgeSharp.EdgeSharpApp">
+            <summary>
+            Win32 EdgeSahrp basic application (<see cref="T:EdgeSharp.Core.IStartup"/>) class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.EdgeSharpApp.#ctor(EdgeSharp.Core.ICoreServices)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.EdgeSharpApp"/>.
+            </summary>
+            <param name="coreServices">Win32 EdgeSahrp core services registration class.</param>
+        </member>
+        <member name="M:EdgeSharp.EdgeSharpApp.ConfigureCoreServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.INativeHost.GetWindowState">
+            <summary> Gets the current window state Maximised / Normal / Minimised etc. </summary>
+            <returns> The window state. </returns>
+        </member>
+        <member name="M:EdgeSharp.INativeHost.SetWindowState(EdgeSharp.Core.Configuration.WindowState)">
+            <summary> Sets window state. Maximise / Minimize / Restore. </summary>
+            <param name="state"> The state to set. </param>
+            <returns> True if it succeeds, false if it fails. </returns>
+        </member>
+        <member name="P:EdgeSharp.NativeHosts.DpiHelper.FirstParkingWindowCreated">
+            <summary>
+             Indicates whether the first (Parking)Window has been created. From that moment on,
+             we will not be able nor allowed to change the Process' DpiMode.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.NativeHosts.DpiHelper.GetHostApplicationDpiAwareness">
+            <summary>
+             Gets the DPI awareness.
+            </summary>
+            <returns>The thread's/process' current HighDpi mode</returns>
+        </member>
+        <member name="M:EdgeSharp.NativeHosts.DpiHelper.SetProcessDpiAwarenessContext(EdgeSharp.Core.Configuration.HighDpiMode)">
+            <summary>
+             Sets the DPI awareness. If not available on the current OS, it falls back to the next possible.
+            </summary>
+            <returns>true/false - If the process DPI awareness is successfully set, returns true. Otherwise false.</returns>
+        </member>
+        <member name="M:EdgeSharp.NativeHosts.WinNativeHost.SetWindowState(EdgeSharp.Core.Configuration.WindowState)">
+            <summary> Sets window state. Maximise / Minimize / Restore. </summary>
+            <param name="state"> The state to set. </param>
+            <returns> True if it succeeds, false if it fails. </returns>
+        </member>
+    </members>
+</doc>

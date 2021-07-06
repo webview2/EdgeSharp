@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Platforms>AnyCPU</Platforms>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <EmbedAllSources>true</EmbedAllSources>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Projects\piloitte\EdgeSharp\src\EdgeSharp\EdgeSharp.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="runtimes\winArm64\native\WebView2Loader.dll" />
+    <None Remove="runtimes\winX64\native\WebView2Loader.dll" />
+    <None Remove="runtimes\winX86\native\WebView2Loader.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="runtimes\winArm64\native\WebView2Loader.dll" />
+    <EmbeddedResource Include="runtimes\winX64\native\WebView2Loader.dll" />
+    <EmbeddedResource Include="runtimes\winX86\native\WebView2Loader.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.865-prerelease" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\EdgeSharp.Core\EdgeSharp.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="edgesharp.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+  
+</Project>

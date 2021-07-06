@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EdgeSharp.Core.Owin</name>
+    </assembly>
+    <members>
+        <member name="T:EdgeSharp.Core.Owin.IOwinAppStartup">
+            <summary>
+            Represents the Owin startup.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Owin.IOwinAppStartup.Environment">
+            <summary>
+            Gets or sets the environent.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Owin.IOwinAppStartup.ErrorHandlingPath">
+            <summary>
+            Gets or sets the error handling path.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Owin.IOwinAppStartup.Configuration">
+            <summary>
+            Gets or sets Owin/Asp.NET Core configuration.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.IOwinAppStartup.Configure(Microsoft.Extensions.Configuration.IConfigurationBuilder)">
+            <summary>
+            Configure the configuration builder.
+            </summary>
+            <param name="configBuilder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.IOwinAppStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The primary way to add services. All default handlers should be overriden here using custom handlers.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.IOwinAppStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Configure other primary Owin services.
+            </summary>
+            <param name="app">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> instance.</param>
+            <param name="env">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostEnvironment"/> instance.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.IOwinAppStartup.Configure(Microsoft.AspNetCore.Hosting.IWebHostBuilder)">
+            <summary>
+            Configure other primary Owin services using the host builder.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.IOwinAppStartup.Configure(Microsoft.AspNetCore.Hosting.IWebHost)">
+            <summary>
+            Configure other primary Owin services using the host.
+            </summary>
+            <param name="host">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHost"/> instance.</param>
+        </member>
+        <member name="T:EdgeSharp.Core.Owin.OwinAppBuilder">
+            <summary>
+            Owin EdgeSharp Win32 application builder.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.Create(System.String[])">
+            <summary>
+            Create the <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/> instance.
+            </summary>
+            <returns>Instance of the <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.UseConfig``1(EdgeSharp.Core.Configuration.IConfiguration)">
+            <summary>
+            Allows the developer to use an external EdgeSahrp <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> is provided, that is what is used.
+            If the instance of <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> is not provided, the of TServive is used to create one.
+            </remarks>
+            <typeparam name="TService">A derived type of <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> definition. </typeparam>
+            <param name="config">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.UseWindow``1(EdgeSharp.Core.IBrowserWindow)">
+            <summary>
+            Allows the developer to use an external <see cref="T:EdgeSharp.Core.IBrowserWindow"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:EdgeSharp.Core.IBrowserWindow" /> is provided, that is what is used.
+            If the instance of <see cref="T:EdgeSharp.Core.IBrowserWindow" /> is not provided, the of TServive is used to create one.
+            </remarks>
+            <typeparam name="TService">A derived type of <see cref="T:EdgeSharp.Core.IBrowserWindow" /> definition. </typeparam>
+            <param name="browserWindow">The <see cref="T:EdgeSharp.Core.IBrowserWindow" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.UseApp``1(EdgeSharp.Core.Owin.OwinAppStartup)">
+            <summary>
+            Allows the developer to use an external <see cref="T:EdgeSharp.Core.IStartup"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:EdgeSharp.Core.IStartup" /> is provided, that is what is used.
+            If the instance of <see cref="T:EdgeSharp.Core.IStartup" /> is not provided, the of TApp is used to create one.
+            </remarks>
+            <typeparam name="TApp">A derived type of <see cref="T:EdgeSharp.Core.IStartup" /> definition. </typeparam>
+            <param name="app">The <see cref="T:EdgeSharp.Core.IStartup" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.UseErrorHandler``1(EdgeSharp.Core.Network.IErrorHandler)">
+            <summary>
+            Allows the developer to use an external <see cref="T:EdgeSharp.Core.Network.IErrorHandler"/>.
+            </summary>
+            <remarks>
+            If an instance of <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> is provided, that is what is used.
+            If the instance of <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> is not provided, the of TServive is used to create one.
+            </remarks>
+            <typeparam name="TService">A derived type of <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> definition. </typeparam>
+            <param name="errorHandler">The <see cref="T:EdgeSharp.Core.Network.IErrorHandler" /> instance.</param>
+            <returns>Instance of the <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.Build">
+            <summary>
+            Builds and create the services.
+            </summary>
+            <returns>Instance of the <see cref="T:EdgeSharp.Core.Owin.OwinAppBuilder"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppBuilder.Run">
+            <summary>
+            Runs the application after build.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Owin.OwinAppStartup">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Owin.IOwinAppStartup"/> class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppStartup.#ctor(EdgeSharp.Core.ICoreServices)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Owin.OwinAppStartup"/>
+            </summary>
+            <param name="coreServices">Win32 EdgeSahrp core services registration class.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Owin.OwinAppStartup.Environment">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Owin.OwinAppStartup.ErrorHandlingPath">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Owin.OwinAppStartup.Configuration">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppStartup.ConfigureCoreServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppStartup.Configure(Microsoft.Extensions.Configuration.IConfigurationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppStartup.Configure(Microsoft.AspNetCore.Hosting.IWebHostBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinAppStartup.Configure(Microsoft.AspNetCore.Hosting.IWebHost)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Owin.OwinErrorHandler">
+            <summary>
+            The default implementation of Owin <see cref="T:EdgeSharp.Core.Defaults.ErrorHandler"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinErrorHandler.#ctor(EdgeSharp.Core.Configuration.IConfiguration,EdgeSharp.Core.Owin.IOwinPipeline)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Owin.OwinErrorHandler"/>.
+            </summary>
+            <param name="config">EdgeSharp <see cref="T:EdgeSharp.Core.Configuration.IConfiguration"/> instance.</param>
+            <param name="owinPipeline">The <see cref="T:EdgeSharp.Core.Owin.IOwinPipeline"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinErrorHandler.HandleErrorAsync(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IRequest,EdgeSharp.Core.Network.IResponse,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Owin.OwinSchemeHandler">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Network.IOwinSchemeHandler"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinSchemeHandler.#ctor(EdgeSharp.Core.Owin.IOwinPipeline,EdgeSharp.Core.Network.IErrorHandler)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Owin.OwinSchemeHandler"/>
+            </summary>
+            <param name="owinPipeline">The <see cref="T:EdgeSharp.Core.Owin.IOwinPipeline"/> instance.</param>
+            <param name="errorHandler">The <see cref="T:EdgeSharp.Core.Network.IErrorHandler"/> instance.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Owin.OwinSchemeHandler.UrlScheme">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Owin.OwinSchemeHandler.ProcessRequest(EdgeSharp.Core.Network.IRequest,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Owin.OwinStartup">
+            <summary>
+            The actual Owin startup class. 
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.OwinAppBuilder`1">
+            <summary>
+            The Owin App builder class.
+            </summary>
+            <typeparam name="TStartup">The type of startup object.</typeparam>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EdgeSharp.Core.OwinAppBuilder`1.#ctor(EdgeSharp.Core.IStartup)" -->
+        <member name="M:EdgeSharp.Core.OwinAppBuilder`1.Build">
+            <summary>
+            Creates a <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> containing services from the provided <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.OwinAppBuilder`1.Run(System.IServiceProvider)">
+            <summary>
+            Run the application.
+            </summary>
+            <param name="provider">The <see cref="T:System.IServiceProvider"/> instance</param>
+        </member>
+        <member name="M:EdgeSharp.Core.OwinAppBuilder`1.Stop">
+            <summary>
+            Stops child processes and dispose al created services.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EdgeSharp.WinForms</name>
+    </assembly>
+    <members>
+        <member name="F:EdgeSharp.WinForms.BrowserForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.WinForms.BrowserForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EdgeSharp.WinForms.BrowserForm.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.WinForms.WinFormsStartup">
+            <summary>
+            The default implementation of WinForms <see cref="T:EdgeSharp.Core.StartupBase"/> class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.WinForms.WinFormsStartup.#ctor(EdgeSharp.Core.ICoreServices)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.WinForms.WinFormsStartup"/>.
+            </summary>
+            <param name="coreServices">WinForms EdgeSahrp core services registration class.</param>
+        </member>
+    </members>
+</doc>

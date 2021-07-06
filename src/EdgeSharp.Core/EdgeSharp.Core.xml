@@ -1,0 +1,2646 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EdgeSharp.Core</name>
+    </assembly>
+    <members>
+        <member name="T:EdgeSharp.Core.AppBuilder`1">
+            <summary>
+            The App builder class.
+            </summary>
+            <typeparam name="TStartup">The type of startup object.</typeparam>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EdgeSharp.Core.AppBuilder`1.#ctor(EdgeSharp.Core.IStartup)" -->
+        <member name="M:EdgeSharp.Core.AppBuilder`1.Build">
+            <summary>
+            Creates a <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> containing services from the provided <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.AppBuilder`1.Run(System.IServiceProvider)">
+            <summary>
+            Run the application.
+            </summary>
+            <param name="provider">The <see cref="T:System.IServiceProvider"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.AppBuilder`1.Stop">
+            <summary>
+            Stops child processes and dispose al created services.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.ServiceLocator">
+            <summary>
+            Proxy service provider.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.ServiceLocator.Current">
+            <summary>
+            Gets or sets the  global current <see cref="T:EdgeSharp.Core.ServiceLocator"/> instance.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.ServiceLocator.Provider">
+            <summary>
+            Gets the <see cref="T:System.IServiceProvider"/> instance.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.ServiceLocator.GetInstances(System.Type)">
+            <summary>
+            Gets list of service objects by service <see cref="T:System.Type"/>.
+            </summary>
+            <param name="serviceType">The <see cref="T:System.Type"/> instance.</param>
+            <returns>List of objects.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.ServiceLocator.GetInstance(System.Type)">
+            <summary>
+             Gets service object by service <see cref="T:System.Type"/>.
+            </summary>
+            <param name="serviceType"></param>
+            <returns>The object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.ServiceLocator.GetInstances``1">
+            <summary>
+            Gets list of service objects by service <see cref="T:System.Type"/>.
+            </summary>
+            <typeparam name="TService">Type of service.</typeparam>
+            <returns>List of objects.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.ServiceLocator.GetInstance``1">
+            <summary>
+            Gets service object by service <see cref="T:System.Type"/>.
+            </summary>
+            <typeparam name="TService">Type of service.</typeparam>
+            <returns>The object</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EdgeSharp.Core.ServiceLocator.Bootstrap``1(EdgeSharp.Core.AppBuilder{``0})" -->
+        <member name="M:EdgeSharp.Core.ServiceLocator.Bootstrap(System.IServiceProvider)">
+            <summary>
+            The function sets a new <see cref="T:EdgeSharp.Core.ServiceLocator"/> instance from injected <see cref="T:System.IServiceProvider"/> instance.
+            </summary>
+            <param name="provider">The <see cref="T:System.IServiceProvider"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Borderless.BorderlessController.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="T:EdgeSharp.Core.Configuration.BorderlessOption">
+            <summary>
+            Configuration options associated with the borderless window.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Configuration.BorderlessOption.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Configuration.BorderlessOption"/>.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.BorderlessOption.Resizer">
+            <summary>
+            Gets or sets the window resizer grip for borderless windows.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.BorderlessOption.Draggable">
+            <summary>
+            Gets or sets a value indicating whether the borderless window is draggable. 
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.BorderlessOption.UseDefaultDragHandler">
+            <summary>
+            Gets or sets a value indicating whether the borderless window uses the default drag handler. 
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.BorderlessOption.DragZones">
+            <summary>
+            Gets or sets list of draggable areas.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Configuration.DragZoneConfiguration">
+            <summary> 
+            Represents a drag zone on the main borderles window. 
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Configuration.DragZoneConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Configuration.DragZoneConfiguration"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Configuration.DragZoneConfiguration.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Configuration.DragZoneConfiguration"/>
+            </summary>
+            <param name="height">The height of the drag zone.</param>
+            <param name="topoffset">The offset from the top of the frame.</param>
+            <param name="leftoffset">The offset from the left of the frame.</param>
+            <param name="rightoffset">The offset from the right of the frame.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Configuration.DragZoneConfiguration.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Configuration.DragZoneConfiguration"/>
+            </summary>
+            <param name="entireWindow">A boolean value to indicate if entire window is to be the drag zone.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.DragZoneConfiguration.EntireWindow">
+            <summary>
+            Gets or sets a value indicating whether the entire window should be dragged/moved by clicking and dragging anywhere on the window.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.DragZoneConfiguration.Height">
+            <summary>
+            Gets or sets the height of the drag zone, typically at the top of the window.
+            This is the height of the drag zone.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.DragZoneConfiguration.TopOffset">
+            <summary>
+            Gets or sets the offset from the top of the frame to start the drag area.
+            This is the offset from the top of the frame.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.DragZoneConfiguration.LeftOffset">
+            <summary>
+            Gets or sets the offset from the left of the frame to start the drag area.
+            This is the offset from the left of the frame.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.DragZoneConfiguration.RightOffset">
+            <summary>
+            Gets or sets the offset from the right of the frame to start the drag area.
+            This is the offset from the right of the frame.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Configuration.DragZoneConfiguration.InZone(System.Drawing.Size,System.Drawing.Point,System.Single)">
+            <summary> 
+            Determines if the point is in the zone. 
+            </summary>
+            <param name="size">The size of the area to calculate the offsets. </param>
+            <param name="point">The point.</param>
+            <param name="scale"> The scale to use for dpi / desktop scale compensation.</param>
+            <returns>True if in the zone.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.Configuration.HighDpiMode">
+            <summary>
+             Specifies the different high DPI modes that can be applied to an application.
+            </summary>
+            <remarks>
+             <para>
+             Specifying the high DPI mode is dependent on the OS version of the machine you're running your application on.
+             Setting the high DPI mode will work on machines running Windows 10 Creators Update (version 1703) or later versions.
+             </para>
+             <para>
+             Changing the DPI mode while the application is running doesn't impact scaling if you're using the `PerMonitor` value.
+             If there is more than one monitor attached and their DPI settings are different, the DPI may change when the window
+             is moved from one monitor to the other.
+             In this case, the application rescales according to the new monitor's DPI settings.
+             Alternatively, the DPI of a window can be changed when the OS scaling setting is changed for the monitor the window is on.
+             </para>
+            </remarks>
+        </member>
+        <member name="F:EdgeSharp.Core.Configuration.HighDpiMode.UNAWARE">
+            <summary>
+             The window does not scale for DPI changes and always assumes a scale factor of 100%.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Core.Configuration.HighDpiMode.SYSTEM_AWARE">
+            <summary>
+             The window queries for the DPI of the primary monitor once and uses this for the application on all monitors.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Core.Configuration.HighDpiMode.PER_MONITOR_AWARE">
+            <summary>
+             The window checks for DPI when it's created and adjusts scale factor when the DPI changes.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Core.Configuration.HighDpiMode.PER_MONITOR_AWARE2">
+            <summary>
+             Similar to <see cref="!:PerMonitor"/>, but enables child window DPI change notification, improved scaling of comctl32 controls and dialog scaling.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Core.Configuration.HighDpiMode.UNAWARE_GDI_SCALED">
+            <summary>
+             Similar to <see cref="!:DpiUnaware"/>, but improves the quality of GDI/GDI+ based content.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Configuration.IConfiguration">
+            <summary>
+            Main EdgeSharp configuration class.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.StartUrl">
+            <summary>
+            Gets or sets he start resource url.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.SdkVersion">
+             <summary>
+            Gets or sets WebView2 SDK version.
+             </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.RuntimeVersion">
+            <summary>
+            Gets or sets WebView2 runtime version.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.DebuggingMode">
+            <summary>
+            Gets a value indicating whether the application is in debug mode. 
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.BrowserBounds">
+            <summary>
+            Gets or sets WebView2 control/window size.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.WebView2CreationOptions">
+            <summary>
+            Gets or sets WebView2 creation and environment options.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.UrlSchemes">
+            <summary>
+            Gets or sets the application url schemes.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.CommandLineArgs">
+            <summary>
+            Gets or sets Chromium command line arguments.
+            </summary>
+            <remarks>
+            Note: command line argument is different from option:
+            Sample argument = "disable-web-security" : "1"
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.CommandLineOptions">
+            <summary>
+            Gets or sets Chromium command line options.
+            </summary>
+            <remarks>
+            Note: command line option is different from argument:
+            Sample option = --disable-web-security
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.WindowOptions">
+            <summary>
+            Gets or sets window options.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IConfiguration.ExtensionData">
+            <summary>
+            Gets or sets place holder for extra parameters/configuration as may be needed by the developer.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Configuration.IWindowOptions">
+            <summary>
+            Represents a hosting window options.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.Title">
+            <summary>
+            Gets or sets the window title.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.RelativePathToIconFile">
+            <summary>
+            Gets or sets the window icon relative window icon.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.KioskMode">
+            <summary>
+            Gets or sets a value indicating whether the window should be created in kiosk mode.
+            </summary>
+            <remarks>
+            Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.Fullscreen">
+            <summary>
+            Gets or sets a value indicating whether the window should be created in fullscreen mode.
+            </summary>
+            <remarks>
+            Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.StartCentered">
+            <summary>
+            Gets or sets a value indicating whether the window should be centered when created.
+            </summary>
+            <remarks>
+            Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.Borderless">
+            <summary>
+            Gets or sets a value indicating whether the window should be created borderless.
+            </summary>
+            <remarks>
+            Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.NoResize">
+            <summary>
+            Gets or sets a value indicating whether the window should be created with no resize option.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.MinimumSize">
+            <summary>
+            Gets or sets a value setting the window minimum size.
+            </summary>
+            <remarks>
+            Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.MaximumSize">
+            <summary>
+            Gets or sets a value setting the window maximun size.
+            </summary>
+            <remarks>
+             Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.HighDpiMode">
+            <summary>
+            Gets or sets a high dpi mode.
+            </summary>
+            <remarks>
+            Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.WindowState">
+            <summary>
+            Gets or sets the window state.
+            </summary>
+            <remarks>
+            Applies on to Win32 EdgeSarp but can be used for WinForms, Wpf too.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.IWindowOptions.BorderlessOption">
+            <summary>
+            Gets or sets window <see cref="P:EdgeSharp.Core.Configuration.IWindowOptions.BorderlessOption"/>.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Configuration.WindowOptions">
+            <summary>
+            Default implementation of <see cref="T:EdgeSharp.Core.Configuration.IWindowOptions"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Configuration.WindowOptions.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Configuration.WindowOptions"/>
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.Title">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.RelativePathToIconFile">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.DisableResizing">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.DisableMinMaximizeControls">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.Fullscreen">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.KioskMode">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.StartCentered">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.Borderless">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.UseCustomStyle">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.NoResize">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.MinimumSize">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.MaximumSize">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.HighDpiMode">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.WindowState">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Configuration.WindowOptions.BorderlessOption">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.CoreServicesBase">
+            <summary>
+            The base <see cref="T:EdgeSharp.Core.ICoreServices"/> class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.CoreServicesBase.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.ActionControllerProvider">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Network.IActionControllerProvider"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionControllerProvider.#ctor(EdgeSharp.Core.Configuration.IConfiguration,EdgeSharp.Core.Network.IActionRouteProvider,EdgeSharp.Core.Network.IErrorHandler,EdgeSharp.Core.IDataTransferOptions)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.ActionControllerProvider"/>.
+            </summary>
+            <param name="config">EdgeSharp <see cref="T:EdgeSharp.Core.Configuration.IConfiguration"/> instance.</param>
+            <param name="routeProvider">The <see cref="T:EdgeSharp.Core.Network.IActionRouteProvider"/> instance.</param>
+            <param name="errorHandler">The <see cref="T:EdgeSharp.Core.Network.IErrorHandler"/> instance.</param>
+            <param name="dataTransferOptions">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionControllerProvider.Execute(EdgeSharp.Core.Network.IActionRequest)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.ActionParameterBinder">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Network.IActionParameterBinder"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionParameterBinder.#ctor(EdgeSharp.Core.IDataTransferOptions)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.ActionParameterBinder"/>.
+            </summary>
+            <param name="dataTransfers">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionParameterBinder.Bind(System.String,System.Type,System.Text.Json.JsonElement)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.ActionRouteProvider">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Network.IActionRouteProvider"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.#ctor(EdgeSharp.Core.Network.IActionParameterBinder,EdgeSharp.Core.IDataTransferOptions)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.ActionRouteProvider"/>.
+            </summary>
+            <param name="actionParameterBinder">The <see cref="T:EdgeSharp.Core.Network.IActionParameterBinder"/> instance.</param>
+            <param name="dataTransferOptions">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.ActionRouteProvider.RouteMap">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.ActionRouteProvider.RouteKeys">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.RegisterAllRoutes(System.Collections.Generic.List{EdgeSharp.Core.Network.ActionController})">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.RegisterRoute(System.String,EdgeSharp.Core.Network.Route)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.RegisterRoutes(System.Collections.Generic.IDictionary{System.String,EdgeSharp.Core.Network.Route})">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.GetRoute(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.RouteExists(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.IsRouteAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ActionRouteProvider.RouteHasReturnValue(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.AppSettings">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Infrastructure.IAppSettings"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.AppSettings.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.AppSettings"/>.
+            </summary>
+            <param name="appName">The application name used to name the settings file.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.AppSettings.AppName">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.AppSettings.SettingsFilePath">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.AppSettings.Settings">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.AppSettings.Read(EdgeSharp.Core.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.AppSettings.Save(EdgeSharp.Core.Configuration.IConfiguration)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.Configuration">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Configuration.IConfiguration"/>.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.StartUrl">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.SdkVersion">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.RuntimeVersion">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.DebuggingMode">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.UrlSchemes">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.CommandLineArgs">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.CommandLineOptions">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.BrowserBounds">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.WebView2CreationOptions">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.WindowOptions">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.Configuration.ExtensionData">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.Configuration.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.Configuration"/>.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.DataTransferOptions">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.IDataTransferOptions"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.DataTransferOptions.#ctor(System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.DataTransferOptions"/>.
+            </summary>
+            <param name="serializerOptions">The serializer type of <see cref="T:System.Text.Json.JsonSerializerOptions"/>. </param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.DataTransferOptions.MaxBufferSize">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.DataTransferOptions.Encoding">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.DataTransferOptions.SerializerOptions">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.DataTransferOptions.Options">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.ErrorHandler">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Defaults.ErrorHandler"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.#ctor(EdgeSharp.Core.Owin.IOwinPipeline)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.ErrorHandler"/>.
+            </summary>
+            <param name="owinPipeline">The <see cref="T:EdgeSharp.Core.Owin.IOwinPipeline"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleErrorAsync(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IRequest,EdgeSharp.Core.Network.IResponse,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleError(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IActionRequest,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleRouteNotFound(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleError(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IRequest,EdgeSharp.Core.Network.IResponse,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleRouteNotFoundAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleErrorAsync(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IActionRequest,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleError(EdgeSharp.Core.Infrastructure.UrlSchemeType,System.IO.FileInfo,System.IO.Stream,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ErrorHandler.HandleErrorAsync(EdgeSharp.Core.Infrastructure.UrlSchemeType,System.IO.FileInfo,System.IO.Stream,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.HostObjectProvider">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.IHostObjectProvider"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.HostObjectProvider.#ctor(EdgeSharp.Core.Network.IActionControllerProvider,EdgeSharp.Core.IDataTransferOptions)">
+            <summary>
+             Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.HostObjectProvider"/>.
+            </summary>
+            <param name="controllerProvider">The <see cref="T:EdgeSharp.Core.Network.IActionControllerProvider"/> instance.</param>
+            <param name="dataTransferOptions">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.HostObjectProvider.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.HostObjectProvider.HostObject">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.HostObjectProvider.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.ResourceRequestHandler">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.IResourceRequestHandler"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.#ctor(EdgeSharp.Core.Configuration.IConfiguration,EdgeSharp.Core.Network.IScriptExecutor,EdgeSharp.Core.IHostObjectProvider,EdgeSharp.Core.Network.IActionControllerProvider,EdgeSharp.Core.Network.IActionRouteProvider,EdgeSharp.Core.IDataTransferOptions)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.ResourceRequestHandler"/>
+            </summary>
+            <param name="config">EdgeSharp <see cref="T:EdgeSharp.Core.Configuration.IConfiguration"/> instance.</param>
+            <param name="scriptExecutor">The <see cref="T:EdgeSharp.Core.Network.IScriptExecutor"/> instance.</param>
+            <param name="hostObjectHandler">The <see cref="T:EdgeSharp.Core.IHostObjectProvider"/> instance.</param>
+            <param name="controllerProvider">The <see cref="T:EdgeSharp.Core.Network.IActionControllerProvider"/> instance.</param>
+            <param name="routeProvider">The <see cref="T:EdgeSharp.Core.Network.IActionRouteProvider"/> instance.</param>
+            <param name="dataTransferOptions">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.ResourceRequestHandler.CoreWebView2">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.Initialize(Microsoft.Web.WebView2.Core.CoreWebView2)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.HandleResourceRequest(Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.HandleWebMessageReceived(Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.SetNoContentResponse(System.String,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.SetResponse(EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.AddHostObject(System.String,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.RemoveHostObject(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.RemoveAllHostObjects">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestHandler.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.ResourceRequestHandler.EnvironmentOptions">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.ResourceRequestSchemeHandler">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Network.IResourceRequestSchemeHandler"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestSchemeHandler.#ctor(EdgeSharp.Core.Network.IActionControllerProvider,EdgeSharp.Core.Network.IActionRouteProvider,EdgeSharp.Core.IDataTransferOptions,EdgeSharp.Core.Network.IErrorHandler)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.ResourceRequestSchemeHandler"/>
+            </summary>
+            <param name="controllerProvider">The <see cref="T:EdgeSharp.Core.Network.IActionControllerProvider"/> instance.</param>
+            <param name="routeProvider">The <see cref="T:EdgeSharp.Core.Network.IActionRouteProvider"/> instance.</param>
+            <param name="dataTransfers">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance.</param>
+            <param name="errorHandler">The <see cref="T:EdgeSharp.Core.Network.IErrorHandler"/> instance.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.ResourceRequestSchemeHandler.UrlScheme">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ResourceRequestSchemeHandler.ProcessRequest(EdgeSharp.Core.Network.IRequest,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.RouteToActionSchemeHandler">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Network.IRouteToActionSchemeHandler"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.RouteToActionSchemeHandler.#ctor(EdgeSharp.Core.Network.IActionControllerProvider,EdgeSharp.Core.Network.IActionRouteProvider,EdgeSharp.Core.IDataTransferOptions,EdgeSharp.Core.Network.IErrorHandler)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.RouteToActionSchemeHandler"/>
+            </summary>
+            <param name="controllerProvider">The <see cref="T:EdgeSharp.Core.Network.IActionControllerProvider"/> instance</param>
+            <param name="routeProvider">The <see cref="T:EdgeSharp.Core.Network.IActionRouteProvider"/> instance</param>
+            <param name="dataTransfers">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance</param>
+            <param name="errorHandler">The <see cref="T:EdgeSharp.Core.Network.IErrorHandler"/> instance</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.RouteToActionSchemeHandler.UrlScheme">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.RouteToActionSchemeHandler.ProcessRequest(EdgeSharp.Core.Network.IRequest,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.Defaults.ScriptExecutor">
+            <summary>
+            The default implementation of <see cref="T:EdgeSharp.Core.Network.IScriptExecutor"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ScriptExecutor.#ctor(EdgeSharp.Core.Network.IActionControllerProvider,EdgeSharp.Core.IDataTransferOptions)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.Defaults.ScriptExecutor"/>
+            </summary>
+            <param name="controllerProvider">The <see cref="T:EdgeSharp.Core.Network.IActionControllerProvider"/> instance.</param>
+            <param name="dataTransferOptions">The <see cref="T:EdgeSharp.Core.IDataTransferOptions"/> instance.</param>
+        </member>
+        <member name="P:EdgeSharp.Core.Defaults.ScriptExecutor.OnDocumentCreatedScripts">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.Defaults.ScriptExecutor.ExecuteScript(EdgeSharp.Core.Network.IActionRequest,System.Action{System.String})">
+            <inheritdoc />
+        </member>
+        <member name="T:EdgeSharp.Core.IBrowserWindow">
+            <summary>
+            Represents the browser window - a common way to define all windows - Win32, WinForms, Wpf.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:EdgeSharp.Core.IBrowserWindow.Source" -->
+        <!-- Badly formed XML comment ignored for member "P:EdgeSharp.Core.IBrowserWindow.ZoomFactor" -->
+        <member name="P:EdgeSharp.Core.IBrowserWindow.DefaultBackgroundColor">
+            <summary>
+            Gets or sets the default background color for the WebView.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IBrowserWindow.CanGoForward">
+            <summary>
+            Gets a value indicating whether the webview can navigate to a next page in the navigation history.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IBrowserWindow.CanGoBack">
+            <summary>
+            Gets a value indicating whether the webview can navigate to a the previous page in the navigation history.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IBrowserWindow.ExecuteScriptAsync(System.String)">
+            <summary>
+             Executes the provided script in the top level document of the WebView.
+            </summary>
+            <param name="script">The JavaScript to execute.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> that return a string.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IBrowserWindow.NavigateToString(System.String)">
+            <summary>
+            Renders the provided HTML as the top level document of the WebView.
+            </summary>
+            <param name="htmlContent">The HTML content to navigate to.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IBrowserWindow.Reload">
+            <summary>
+            Reloads the top level document of the WebView.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IBrowserWindow.GoForward">
+            <summary>
+            Navigates to the next page in navigation history.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IBrowserWindow.GoBack">
+            <summary>
+            Navigates to the previous page in navigation history.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IBrowserWindow.Stop">
+            <summary>
+            Stops any in progress navigation in the WebView.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IBrowserWindow.Exit">
+            <summary>
+            Close and exit window.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.ICoreServices">
+            <summary>
+            Represents core services.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.ICoreServices.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds core services.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.LogEntry.#ctor(Microsoft.Extensions.Logging.LogLevel,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:EdgeSharp.Core.Infrastructure.LogEntry" /> class.</summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.LogEntry.#ctor(Microsoft.Extensions.Logging.LogLevel,System.Exception)">
+            <summary>Initializes a new instance of the <see cref="T:EdgeSharp.Core.Infrastructure.LogEntry" /> class.</summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.LogEntry.#ctor(Microsoft.Extensions.Logging.LogLevel,System.String,System.Exception)">
+            <summary>Initializes a new instance of the <see cref="T:EdgeSharp.Core.Infrastructure.LogEntry" /> class.</summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Infrastructure.LogEntry.LogLevel">
+            <summary>
+            Gets the log level.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Infrastructure.LogEntry.Entry">
+            <summary>
+            Gets the entry.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Infrastructure.LogEntry.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.LogEntry.ToString">
+            <summary>
+            The to string.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.SimpleLogger.#ctor(System.String,System.Boolean,System.Int32)">
+            <summary>Initializes a new instance of the <see cref="T:EdgeSharp.Core.Infrastructure.SimpleLogger" /> class.</summary>
+            <param name="fullFilePath">The full file path.</param>
+            <param name="logToConsole">if set to <c>true</c> log to console.</param>
+            <param name="maxFileSizeBeforeLogRotation">The maximum file size before log rotation in MB.</param>
+        </member>
+        <member name="T:EdgeSharp.Core.Infrastructure.MimeMapper">
+            <summary>
+            The mime mapper.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Core.Infrastructure.MimeMapper.MimeDictionary">
+            <summary>
+            The MimeDictionary.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.MimeMapper.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:EdgeSharp.Core.Infrastructure.MimeMapper"/> class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.MimeMapper.GetMimeType(System.String)">
+            <summary>
+            The get mime type.
+            </summary>
+            <param name="extension">
+            The extension.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            Argument exception.
+            </exception>
+        </member>
+        <member name="T:EdgeSharp.Core.Infrastructure.IAppSettings">
+            <summary>
+            Application settings - for saving and reading application properties.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Infrastructure.IAppSettings.AppName">
+            <summary>
+            Gets or sets the application name.
+            </summary>
+            <remarks>
+            Note: this is used in naming the configuration file when app settings are saved.
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Core.Infrastructure.IAppSettings.SettingsFilePath">
+            <summary>
+            Gets the application settings full file path.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Infrastructure.IAppSettings.Settings">
+            <summary>
+            Gets the application settings.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.IAppSettings.Read(EdgeSharp.Core.Configuration.IConfiguration)">
+            <summary>
+            Reads application settings data.
+            </summary>
+            <param name="config">The <see cref="T:EdgeSharp.Core.Configuration.IConfiguration"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Infrastructure.IAppSettings.Save(EdgeSharp.Core.Configuration.IConfiguration)">
+            <summary>
+            Save application settings data.
+            </summary>
+            <param name="config">The <see cref="T:EdgeSharp.Core.Configuration.IConfiguration"/> instance.</param>
+        </member>
+        <member name="T:EdgeSharp.Core.Infrastructure.UrlScheme">
+            <summary>
+            The url scheme.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Infrastructure.UrlScheme.BaseUrlStrict">
+            <summary>
+            Gets or sets a value indicating whether url must be relative to base.
+            Only valid for external url.
+            If base is http://a.com/me/you then 
+            http://a.com/me/you/they is valid but
+            http://a.com/me/they is not  valid
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.IResourceRequestHandler">
+            <summary>
+            Primary handler to process resource files, resource url, requests.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IResourceRequestHandler.CoreWebView2">
+            <summary>
+            Gets WebView2 core object.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IResourceRequestHandler.EnvironmentOptions">
+            <summary>
+            Gets or sets WebView2 environment options.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.Initialize(Microsoft.Web.WebView2.Core.CoreWebView2)">
+            <summary>
+            Initialize method is invoked after WebView2 is created.
+            </summary>
+            <param name="coreWebView2">The <see cref="P:EdgeSharp.Core.IResourceRequestHandler.CoreWebView2"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.HandleWebMessageReceived(Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs)">
+            <summary>
+            Handle web message received.
+            This is invoked after CoreWebView2.WebMessageReceived Event received.
+            </summary>
+            <param name="eventArgs">The <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.HandleResourceRequest(Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs)">
+            <summary>
+            Handle resource request.
+            This is invoked after CoreWebView2.WebResourceRequested Event received.
+            </summary>
+            <param name="eventArgs">The <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.SetNoContentResponse(System.String,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <summary>
+            It sets no content response to resource/request.
+            </summary>
+            <param name="reasonPhrase">Reason for no content.</param>
+            <param name="deferral">The <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral"/> instance.</param>
+            <param name="callback">The callback.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.SetResponse(EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <summary>
+            Sets resource/request response.
+            </summary>
+            <param name="response">The <see cref="T:EdgeSharp.Core.Network.IResponse"/> instance.</param>
+            <param name="deferral">The <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral"/> instance.</param>
+            <param name="callback">The callback.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.AddHostObject(System.String,System.Object)">
+            <summary>
+            Adds/register host object to script.
+            </summary>
+            <param name="name">Host object name.</param>
+            <param name="hostObject">The host object.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.RemoveHostObject(System.String)">
+            <summary>
+            Remove registered host object from script.
+            </summary>
+            <param name="name">Host object name.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IResourceRequestHandler.RemoveAllHostObjects">
+            <summary>
+            Remove alls registered host objects from script.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.IStartup">
+            <summary>
+            Represents the startup.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.CreateServiceCollection">
+            <summary>
+            This is used to create custom <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <remarks>
+            Note: this is redundant for Owin based applications.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.Initialize(System.IServiceProvider)">
+            <summary>
+            Creates/initializes common infrastructure objects [Configuration, Logging, AppSetting] that are not previously added to <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
+            <remarks>
+            Note: the objects [Configuration, Logging, AppSetting] will only be created/initialized if not added in:
+              - ConfigureCoreServices
+              - CoreServices
+              - ConfigureServices
+            </remarks>
+            </summary>
+            <param name="serviceProvider">The <see cref="T:System.IServiceProvider"/> for application services.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.ConfigureCoreServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            For adding Win32, WinForms, WPF specific core services to the application dependency injection container.
+            </summary>
+            <remarks>
+            Note: services are added here if they were not previously added in ConfigureServices.
+            This is why it uses for instance "TryAddSingleton".
+            </remarks>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The primary way to add services. All default handlers should be overriden here using custom handlers.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> containing services from the provided <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <remarks>
+            Note: 
+              1. This where external dependency providers can be used to create<see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/>.
+              2. This is redundant for Owin based applications.
+            </remarks>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.RegisterActionControllerAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            To register custom <see cref="T:EdgeSharp.Core.Network.ActionController"/> instance using the assembly fullpath.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+            <param name="assemblyFullPath"></param>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.RegisterActionControllerAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly)">
+            <summary>
+            To register custom <see cref="T:EdgeSharp.Core.Network.ActionController"/> instance using the assembly binary.
+            </summary>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+            <param name="assembly"></param>
+        </member>
+        <member name="M:EdgeSharp.Core.IStartup.RegisterActionRoutes(System.IServiceProvider)">
+            <summary>
+            To register all controller actions of <see cref="T:EdgeSharp.Core.Network.ActionController"/> previously registered in RegisterActionControllerAssembly.
+            </summary>
+            <param name="serviceProvider">The <see cref="T:System.IServiceProvider"/> for application services.</param>
+        </member>
+        <member name="T:EdgeSharp.Core.IWebView2">
+            <summary>
+            Represents the webview - a common way to define all webview controls - Win32, WinForms, Wpf.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:EdgeSharp.Core.IWebView2.Source" -->
+        <member name="P:EdgeSharp.Core.IWebView2.ZoomFactor">
+            <summary>
+            Gets or sets the zoom factor for the WebView.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IWebView2.DefaultBackgroundColor">
+            <summary>
+            Gets or sets the default background color for the WebView.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IWebView2.CanGoForward">
+            <summary>
+            Gets a value indicating whether the webview can navigate to a next page in the navigation history.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IWebView2.CanGoBack">
+            <summary>
+            Gets a value indicating whether the webview can navigate to a the previous page in the navigation history.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IWebView2.ExecuteScriptAsync(System.String)">
+            <summary>
+             Executes the provided script in the top level document of the WebView.
+            </summary>
+            <param name="script">The JavaScript to execute.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> that return a string.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IWebView2.NavigateToString(System.String)">
+            <summary>
+            Renders the provided HTML as the top level document of the WebView.
+            </summary>
+            <param name="htmlContent">The HTML content to navigate to.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.IWebView2.Reload">
+            <summary>
+            Reloads the top level document of the WebView.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IWebView2.GoForward">
+            <summary>
+            Navigates to the next page in navigation history.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IWebView2.GoBack">
+            <summary>
+            Navigates to the previous page in navigation history.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IWebView2.Stop">
+            <summary>
+            Stops any in progress navigation in the WebView.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.IWindowController">
+            <summary>
+            Represents window controller.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IWindowController.Run(System.String[])">
+            <summary>
+            Runs Win32 EdgeSharp application.
+            </summary>
+            <param name="args"></param>
+            <returns>The success or failure code - [0: success; 1: failure].</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.ActionResponse">
+            <summary>
+            The EdgeLite response.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.ActionResponse.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EdgeSharp.Core.Network.ActionResponse"/> class.
+            </summary>
+            <param name="requestId">
+            The request id.
+            </param>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.ControllerRoutesFactory.CreateControllerInstance(System.Type)">
+            <summary>
+            Creates an instance of a controller of given ControllerBase type.
+            Ctor dependency injection is done using the global IoC container.
+            </summary>
+            <param name="type">Controller type to be created.</param>
+            <returns>Instance reference or null if failed.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.IActionControllerProvider">
+            <summary>
+            Action controller provider - provides execution of controller actions.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionControllerProvider.Execute(EdgeSharp.Core.Network.IActionRequest)">
+            <summary>
+            Executes controller action.
+            </summary>
+            <param name="request">The <see cref="T:EdgeSharp.Core.Network.IActionRequest"/>.</param>
+            <returns>The <see cref="T:EdgeSharp.Core.Network.IActionResponse"/> object.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.IActionParameterBinder">
+            <summary>
+            Binds request data to controller action arguments.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionParameterBinder.Bind(System.String,System.Type,System.Text.Json.JsonElement)">
+            <summary>
+            Binds a request property to controller action argument based on request property/contoller action argument name.
+            </summary>
+            <param name="parameterName">The argument name.</param>
+            <param name="type">The action argument <see cref="T:System.Type"/>.</param>
+            <param name="content">The request json property <see cref="T:System.Text.Json.JsonElement"/>.</param>
+            <returns>The resultant object.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.IActionRouteProvider">
+            <summary>
+            Collection and provider of controller action routes.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Network.IActionRouteProvider.RouteKeys">
+            <summary>
+            Gets the action route keys. 
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Network.IActionRouteProvider.RouteMap">
+            <summary>
+            Gets action routes map.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionRouteProvider.RegisterAllRoutes(System.Collections.Generic.List{EdgeSharp.Core.Network.ActionController})">
+            <summary>
+            Register all action routes.
+            </summary>
+            <param name="controllers">List of <see cref="T:EdgeSharp.Core.Network.ActionController"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionRouteProvider.RegisterRoute(System.String,EdgeSharp.Core.Network.Route)">
+            <summary>
+            Register a single action route.
+            </summary>
+            <param name="key">The route key.</param>
+            <param name="route">The <see cref="T:EdgeSharp.Core.Network.Route"/> instance.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionRouteProvider.RegisterRoutes(System.Collections.Generic.IDictionary{System.String,EdgeSharp.Core.Network.Route})">
+            <summary>
+            Register multiple action routes.
+            </summary>
+            <param name="routeMap">The route map.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionRouteProvider.GetRoute(System.String)">
+            <summary>
+            Gets a single action route based on route url.
+            </summary>
+            <param name="routeUrl">The route url.</param>
+            <returns>The <see cref="T:EdgeSharp.Core.Network.Route"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionRouteProvider.RouteExists(System.String)">
+            <summary>
+            Checks if a route exists using the route url.
+            </summary>
+            <param name="routeUrl">The route url.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionRouteProvider.IsRouteAsync(System.String)">
+            <summary>
+            Checks if the associated controller action is asynchronous.
+            </summary>
+            <param name="routeUrl">The route url.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IActionRouteProvider.RouteHasReturnValue(System.String)">
+            <summary>
+            Checks if the associated controller action has return.
+            </summary>
+            <param name="routeUrl">The route url.</param>
+            <returns>True or false.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.IErrorHandler">
+            <summary>
+            Error/exception handling functionalities
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleRouteNotFound(System.String)">
+            <summary>
+            Handle no route found.
+            </summary>
+            <param name="routePath">The route path.</param>
+            <returns>The <see cref="T:EdgeSharp.Core.Network.IActionResponse"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleError(EdgeSharp.Core.Infrastructure.UrlSchemeType,System.IO.FileInfo,System.IO.Stream,System.Exception)">
+            <summary>
+            Handle error or execption.
+            </summary>
+            <param name="type">The <see cref="T:EdgeSharp.Core.Infrastructure.UrlSchemeType"/> instance.</param>
+            <param name="fileInfo">The <see cref="T:System.IO.FileInfo"/> instance.</param>
+            <param name="fileStream">The <see cref="T:System.IO.Stream"/> instance.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> instance.</param>
+            <returns>The <see cref="T:EdgeSharp.Core.Network.IResponse"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleError(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IRequest,EdgeSharp.Core.Network.IResponse,System.Exception)">
+            <summary>
+            Handle error or execption.
+            </summary>
+            <param name="type">The <see cref="T:EdgeSharp.Core.Infrastructure.UrlSchemeType"/> instance.</param>
+            <param name="request">The <see cref="T:EdgeSharp.Core.Network.IRequest"/> instance.</param>
+            <param name="response">The <see cref="T:EdgeSharp.Core.Network.IResponse"/> instance.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> instance.</param>
+            <returns>The <see cref="T:EdgeSharp.Core.Network.IResponse"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleError(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IActionRequest,System.Exception)">
+            <summary>
+            Handle error or execption.
+            </summary>
+            <param name="type">The <see cref="T:EdgeSharp.Core.Infrastructure.UrlSchemeType"/> instance.</param>
+            <param name="request">The <see cref="T:EdgeSharp.Core.Network.IActionRequest"/> instance.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> instance.</param>
+            <returns>The <see cref="T:EdgeSharp.Core.Network.IActionResponse"/> instance.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleRouteNotFoundAsync(System.String)">
+            <summary>
+            Handle no route found asynchronously.
+            </summary>
+            <param name="routePath">The route path.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> that returns <see cref="T:EdgeSharp.Core.Network.IActionResponse"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleErrorAsync(EdgeSharp.Core.Infrastructure.UrlSchemeType,System.IO.FileInfo,System.IO.Stream,System.Exception)">
+            <summary>
+            Handle error or execption asynchronously.
+            </summary>
+            <param name="type">The <see cref="T:EdgeSharp.Core.Infrastructure.UrlSchemeType"/> instance.</param>
+            <param name="fileInfo">The <see cref="T:System.IO.FileInfo"/> instance.</param>
+            <param name="fileStream">The <see cref="T:System.IO.Stream"/> instance.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> instance.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> that returns <see cref="T:EdgeSharp.Core.Network.IResponse"/> object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleErrorAsync(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IRequest,EdgeSharp.Core.Network.IResponse,System.Exception)">
+            <summary>
+            Handle error or execption asynchronously.
+            </summary>
+            <param name="type">The <see cref="T:EdgeSharp.Core.Infrastructure.UrlSchemeType"/> instance.</param>
+            <param name="request">The <see cref="T:EdgeSharp.Core.Network.IRequest"/> instance.</param>
+            <param name="response">The <see cref="T:EdgeSharp.Core.Network.IResponse"/> instance.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> instance.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> that returns <see cref="T:EdgeSharp.Core.Network.IResponse"/>.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IErrorHandler.HandleErrorAsync(EdgeSharp.Core.Infrastructure.UrlSchemeType,EdgeSharp.Core.Network.IActionRequest,System.Exception)">
+            <summary>
+            Handle error or execption asynchronously.
+            </summary>
+            <param name="type">The <see cref="T:EdgeSharp.Core.Infrastructure.UrlSchemeType"/> instance.</param>
+            <param name="request">The <see cref="T:EdgeSharp.Core.Network.IActionRequest"/> instance.</param>
+            <param name="exception">The <see cref="T:System.Exception"/> instance.</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> that returns <see cref="T:EdgeSharp.Core.Network.IActionResponse"/>.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.IResourceRequestSchemeHandler">
+            <summary>
+            Represents the resource request of a <see cref="T:EdgeSharp.Core.Network.ISchemeHandler"/>.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.IRouteToActionSchemeHandler">
+            <summary>
+            Represents the request to action of a <see cref="T:EdgeSharp.Core.Network.ISchemeHandler"/>.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.ISchemeHandler">
+            <summary>
+            Scheme handler - to handle scheme - http, https etc.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Network.ISchemeHandler.UrlScheme">
+            <summary>
+            Gets the url scheme.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.ISchemeHandler.ProcessRequest(EdgeSharp.Core.Network.IRequest,Microsoft.Web.WebView2.Core.CoreWebView2Deferral,System.Action{EdgeSharp.Core.Network.IResponse,Microsoft.Web.WebView2.Core.CoreWebView2Deferral})">
+            <summary>
+            Process request.
+            </summary>
+            <param name="request">The <see cref="T:EdgeSharp.Core.Network.IRequest"/> instance.</param>
+            <param name="deferral">The <see cref="T:Microsoft.Web.WebView2.Core.CoreWebView2Deferral"/> instance.</param>
+            <param name="callback">The callback.</param>
+        </member>
+        <member name="T:EdgeSharp.Core.Network.IScriptExecutor">
+            <summary>
+            Script executor
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.Network.IScriptExecutor.OnDocumentCreatedScripts">
+            <summary>
+            Gets list of scripts to execute on DOM "document" created.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.IScriptExecutor.ExecuteScript(EdgeSharp.Core.Network.IActionRequest,System.Action{System.String})">
+            <summary>
+            Execute script - to execute script on CoreWebView2.WebMessageReceived Event received.
+            </summary>
+            <param name="actionRequest">The request of <see cref="T:EdgeSharp.Core.Network.IActionRequest"/> instance.</param>
+            <param name="executeScriptCallback">The callback method that is executed.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.Request.#ctor(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String[]},System.Object)">
+            <summary>
+            Resource Request
+            </summary>
+            <param name="url"><see cref="P:EdgeSharp.Core.Network.Request.Url"/></param>
+            <param name="method"><see cref="P:EdgeSharp.Core.Network.Request.Method"/></param>
+            <param name="headers"><see cref="P:EdgeSharp.Core.Network.Request.Headers"/></param>
+            <param name="stream"><see cref="T:System.IO.Stream"/></param>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.Response.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EdgeSharp.Core.Network.Response"/> class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.Network.Response.#ctor(System.Net.HttpStatusCode,System.String,System.Collections.Generic.IDictionary{System.String,System.String[]},System.Object)">
+            <summary>
+            ResourceResponse 
+            </summary>
+            <param name="statusCode"><see cref="P:EdgeSharp.Core.Network.Response.StatusCode"/></param>
+            <param name="reasonPhrase"><see cref="P:EdgeSharp.Core.Network.Response.ReasonPhrase"/></param>
+            <param name="headers"><see cref="P:EdgeSharp.Core.Network.Response.Headers"/></param>
+            <param name="stream"><see cref="!:Stream"/></param>
+        </member>
+        <member name="T:EdgeSharp.Core.IDataTransferOptions">
+            <summary>
+            Data trasnfer object functionalities - deals with transferring stream or json request to controller action arguments and vice-versa. 
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IDataTransferOptions.MaxBufferSize">
+            <summary>
+            Gets maximum buffer size.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IDataTransferOptions.Encoding">
+            <summary>
+            Gets encoding for data transfer.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IDataTransferOptions.SerializerOptions">
+            <summary>
+            Gets the serialization options object.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.IDataTransferOptions.ConvertRequestToJson(System.Object)">
+            <summary>
+            Converts the request object to json.
+            </summary>
+            <param name="request">The request <see cref="T:System.Object"/> to convert.</param>
+            <returns>Converted json request.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IDataTransferOptions.ConvertResponseToJson(System.Object)">
+            <summary>
+            Converts response to json.
+            </summary>
+            <param name="response">The response <see cref="T:System.Object"/> to convert.</param>
+            <returns>Converted json response.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IDataTransferOptions.ConvertJsonToDictionary(System.String,System.Type)">
+            <summary>
+            Converts json to dictionary.
+            </summary>
+            <param name="json">The json string to convert.</param>
+            <param name="typeToConvert">The <see cref="T:System.Type"/> type to convert.</param>
+            <returns>A dictionary object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IDataTransferOptions.ConvertJsonToObject(System.String,System.Type)">
+            <summary>
+            Convert json to object.
+            </summary>
+            <param name="json">The json string to convert.</param>
+            <param name="typeToConvert">The <see cref="T:System.Type"/> type to convert.</param>
+            <returns>An object.</returns>
+        </member>
+        <member name="M:EdgeSharp.Core.IDataTransferOptions.ConvertObjectToJson(System.Object)">
+            <summary>
+            Convert object to json.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>Json string.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.IHostObjectProvider">
+            <summary>
+            Creates remote host objected to be added to script.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IHostObjectProvider.Name">
+            <summary>
+            Gets the host object name.
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Core.IHostObjectProvider.HostObject">
+            <summary>
+            Gets the host object.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Core.RequestHandlerServer">
+            <summary>EdgeSharp default HostObject.</summary>
+        </member>
+        <member name="T:EdgeSharp.Core.ServiceProviderFactory">
+            <summary>
+            This is used to create custom <see cref="T:System.IServiceProvider"/>.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.ServiceProviderFactory.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> containing services from the provided <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <remarks>
+            Note: 
+              1. This where external dependency providers can be used to create<see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/>.
+              2. This is redundant for Owin based applications.
+            </remarks>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.ServiceProvider"/> object.</returns>
+        </member>
+        <member name="T:EdgeSharp.Core.StartupBase">
+            <summary>
+            The base (<see cref="T:EdgeSharp.Core.IStartup"/>) class.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.#ctor(EdgeSharp.Core.ICoreServices)">
+            <summary>
+            Initializes a new instance of <see cref="T:EdgeSharp.Core.StartupBase"/>.
+            </summary>
+            <param name="coreServices">Win32 EdgeSahrp core services registration class.</param>
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.CreateServiceCollection">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.Initialize(System.IServiceProvider)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.ConfigureCoreServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.RegisterActionControllerAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.RegisterActionControllerAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.RegisterActionRoutes(System.IServiceProvider)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Core.StartupBase.GetCurrentLogger(System.IServiceProvider)">
+            <inheritdoc />
+        </member>
+        <member name="M:EdgeSharp.Interop.User32.AreDpiAwarenessContextsEqual(System.IntPtr,System.IntPtr)">
+            <summary>
+             Tries to compare two DPIawareness context values. Return true if they were equal.
+             Return false when they are not equal or underlying OS does not support this API.
+            </summary>
+            <returns>true/false</returns>
+        </member>
+        <member name="T:EdgeSharp.Interop.User32.CS">
+            <summary>
+             Class styles for <see cref="T:EdgeSharp.Interop.User32.WNDCLASS"/>
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Interop.User32.GetMessageA(EdgeSharp.Interop.User32.MSG@,System.IntPtr,System.UInt32,System.UInt32)">
+            <summary>
+             Code page specific GetMessage. Use <see cref="M:EdgeSharp.Interop.User32.GetMessageW(EdgeSharp.Interop.User32.MSG@,System.IntPtr,System.UInt32,System.UInt32)"/> for Unicode.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Interop.User32.GetCurrentSystemMetrics(EdgeSharp.Interop.User32.SystemMetric,System.UInt32)">
+            <summary>
+             Tries to get system metrics for the dpi. dpi is ignored if "GetSystemMetricsForDpi" is not available on the OS that this application is running.
+            </summary>
+            <param name="nIndex">index</param>
+            <param name="dpi">dpi requested</param>
+            <returns>returns system metrics for dpi</returns>
+        </member>
+        <member name="M:EdgeSharp.Interop.User32.GetThreadDpiAwarenessContext">
+            <summary>
+             Tries to get thread dpi awareness context
+            </summary>
+            <returns>Returns thread dpi awareness context if API is available in this version of OS. otherwise, return IntPtr.Zero.</returns>
+        </member>
+        <member name="T:EdgeSharp.Interop.User32.GWL">
+            <summary>
+             Window long values for <see cref="M:EdgeSharp.Interop.User32.SetWindowLong(System.IntPtr,EdgeSharp.Interop.User32.GWL,System.IntPtr)"/> and
+             <see cref="M:EdgeSharp.Interop.User32.GetWindowLong(System.IntPtr,EdgeSharp.Interop.User32.GWL)"/>.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.KeyCode">
+            <summary>
+             The bit mask to extract a key code from a key value.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Modifiers">
+            <summary>
+             The bit mask to extract modifiers from a key value.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.None">
+            <summary>
+             No key pressed.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LButton">
+            <summary>
+             The left mouse button.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.RButton">
+            <summary>
+             The right mouse button.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Cancel">
+            <summary>
+             The CANCEL key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.MButton">
+            <summary>
+             The middle mouse button (three-button mouse).
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.XButton1">
+            <summary>
+             The first x mouse button (five-button mouse).
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.XButton2">
+            <summary>
+             The second x mouse button (five-button mouse).
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Back">
+            <summary>
+             The BACKSPACE key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Tab">
+            <summary>
+             The TAB key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LineFeed">
+            <summary>
+             The CLEAR key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Clear">
+            <summary>
+             The CLEAR key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Return">
+            <summary>
+             The RETURN key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Enter">
+            <summary>
+             The ENTER key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.ShiftKey">
+            <summary>
+             The SHIFT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.ControlKey">
+            <summary>
+             The CTRL key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Menu">
+            <summary>
+             The ALT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Pause">
+            <summary>
+             The PAUSE key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Capital">
+            <summary>
+             The CAPS LOCK key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.CapsLock">
+            <summary>
+             The CAPS LOCK key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.KanaMode">
+            <summary>
+             The IME Kana mode key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.HanguelMode">
+            <summary>
+             The IME Hanguel mode key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.HangulMode">
+            <summary>
+             The IME Hangul mode key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.JunjaMode">
+            <summary>
+             The IME Junja mode key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.FinalMode">
+            <summary>
+             The IME Final mode key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.HanjaMode">
+            <summary>
+             The IME Hanja mode key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.KanjiMode">
+            <summary>
+             The IME Kanji mode key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Escape">
+            <summary>
+             The ESC key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.IMEConvert">
+            <summary>
+             The IME Convert key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.IMENonconvert">
+            <summary>
+             The IME NonConvert key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.IMEAccept">
+            <summary>
+             The IME Accept key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.IMEAceept">
+            <summary>
+             The IME Accept key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.IMEModeChange">
+            <summary>
+             The IME Mode change request.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Space">
+            <summary>
+             The SPACEBAR key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Prior">
+            <summary>
+             The PAGE UP key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.PageUp">
+            <summary>
+             The PAGE UP key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Next">
+            <summary>
+             The PAGE DOWN key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.PageDown">
+            <summary>
+             The PAGE DOWN key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.End">
+            <summary>
+             The END key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Home">
+            <summary>
+             The HOME key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Left">
+            <summary>
+             The LEFT ARROW key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Up">
+            <summary>
+             The UP ARROW key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Right">
+            <summary>
+             The RIGHT ARROW key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Down">
+            <summary>
+             The DOWN ARROW key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Select">
+            <summary>
+             The SELECT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Print">
+            <summary>
+             The PRINT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Execute">
+            <summary>
+             The EXECUTE key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Snapshot">
+            <summary>
+             The PRINT SCREEN key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.PrintScreen">
+            <summary>
+             The PRINT SCREEN key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Insert">
+            <summary>
+             The INS key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Delete">
+            <summary>
+             The DEL key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Help">
+            <summary>
+             The HELP key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D0">
+            <summary>
+             The 0 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D1">
+            <summary>
+             The 1 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D2">
+            <summary>
+             The 2 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D3">
+            <summary>
+             The 3 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D4">
+            <summary>
+             The 4 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D5">
+            <summary>
+             The 5 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D6">
+            <summary>
+             The 6 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D7">
+            <summary>
+             The 7 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D8">
+            <summary>
+             The 8 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D9">
+            <summary>
+             The 9 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.A">
+            <summary>
+             The A key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.B">
+            <summary>
+             The B key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.C">
+            <summary>
+             The C key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.D">
+            <summary>
+             The D key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.E">
+            <summary>
+             The E key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F">
+            <summary>
+             The F key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.G">
+            <summary>
+             The G key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.H">
+            <summary>
+             The H key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.I">
+            <summary>
+             The I key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.J">
+            <summary>
+             The J key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.K">
+            <summary>
+             The K key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.L">
+            <summary>
+             The L key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.M">
+            <summary>
+             The M key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.N">
+            <summary>
+             The N key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.O">
+            <summary>
+             The O key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.P">
+            <summary>
+             The P key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Q">
+            <summary>
+             The Q key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.R">
+            <summary>
+             The R key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.S">
+            <summary>
+             The S key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.T">
+            <summary>
+             The T key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.U">
+            <summary>
+             The U key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.V">
+            <summary>
+             The V key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.W">
+            <summary>
+             The W key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.X">
+            <summary>
+             The X key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Y">
+            <summary>
+             The Y key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Z">
+            <summary>
+             The Z key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LWin">
+            <summary>
+             The left Windows logo key (Microsoft Natural Keyboard).
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.RWin">
+            <summary>
+             The right Windows logo key (Microsoft Natural Keyboard).
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Apps">
+            <summary>
+             The Application key (Microsoft Natural Keyboard).
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Sleep">
+            <summary>
+             The Computer Sleep key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad0">
+            <summary>
+             The 0 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad1">
+            <summary>
+             The 1 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad2">
+            <summary>
+             The 2 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad3">
+            <summary>
+             The 3 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad4">
+            <summary>
+             The 4 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad5">
+            <summary>
+             The 5 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad6">
+            <summary>
+             The 6 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad7">
+            <summary>
+             The 7 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad8">
+            <summary>
+             The 8 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumPad9">
+            <summary>
+             The 9 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Multiply">
+            <summary>
+             The Multiply key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Add">
+            <summary>
+             The Add key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Separator">
+            <summary>
+             The Separator key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Subtract">
+            <summary>
+             The Subtract key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Decimal">
+            <summary>
+             The Decimal key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Divide">
+            <summary>
+             The Divide key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F1">
+            <summary>
+             The F1 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F2">
+            <summary>
+             The F2 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F3">
+            <summary>
+             The F3 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F4">
+            <summary>
+             The F4 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F5">
+            <summary>
+             The F5 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F6">
+            <summary>
+             The F6 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F7">
+            <summary>
+             The F7 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F8">
+            <summary>
+             The F8 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F9">
+            <summary>
+             The F9 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F10">
+            <summary>
+             The F10 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F11">
+            <summary>
+             The F11 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F12">
+            <summary>
+             The F12 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F13">
+            <summary>
+             The F13 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F14">
+            <summary>
+             The F14 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F15">
+            <summary>
+             The F15 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F16">
+            <summary>
+             The F16 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F17">
+            <summary>
+             The F17 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F18">
+            <summary>
+             The F18 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F19">
+            <summary>
+             The F19 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F20">
+            <summary>
+             The F20 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F21">
+            <summary>
+             The F21 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F22">
+            <summary>
+             The F22 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F23">
+            <summary>
+             The F23 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.F24">
+            <summary>
+             The F24 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NumLock">
+            <summary>
+             The NUM LOCK key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Scroll">
+            <summary>
+             The SCROLL LOCK key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LShiftKey">
+            <summary>
+             The left SHIFT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.RShiftKey">
+            <summary>
+             The right SHIFT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LControlKey">
+            <summary>
+             The left CTRL key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.RControlKey">
+            <summary>
+             The right CTRL key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LMenu">
+            <summary>
+             The left ALT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.RMenu">
+            <summary>
+             The right ALT key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.BrowserBack">
+            <summary>
+             The Browser Back key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.BrowserForward">
+            <summary>
+             The Browser Forward key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.BrowserRefresh">
+            <summary>
+             The Browser Refresh key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.BrowserStop">
+            <summary>
+             The Browser Stop key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.BrowserSearch">
+            <summary>
+             The Browser Search key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.BrowserFavorites">
+            <summary>
+             The Browser Favorites key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.BrowserHome">
+            <summary>
+             The Browser Home key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.VolumeMute">
+            <summary>
+             The Volume Mute key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.VolumeDown">
+            <summary>
+             The Volume Down key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.VolumeUp">
+            <summary>
+             The Volume Up key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.MediaNextTrack">
+            <summary>
+             The Media Next Track key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.MediaPreviousTrack">
+            <summary>
+             The Media Previous Track key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.MediaStop">
+            <summary>
+             The Media Stop key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.MediaPlayPause">
+            <summary>
+             The Media Play Pause key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LaunchMail">
+            <summary>
+             The Launch Mail key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.SelectMedia">
+            <summary>
+             The Select Media key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LaunchApplication1">
+            <summary>
+             The Launch Application1 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.LaunchApplication2">
+            <summary>
+             The Launch Application2 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemSemicolon">
+            <summary>
+             The Oem Semicolon key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem1">
+            <summary>
+             The Oem 1 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oemplus">
+            <summary>
+             The Oem plus key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oemcomma">
+            <summary>
+             The Oem comma key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemMinus">
+            <summary>
+             The Oem Minus key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemPeriod">
+            <summary>
+             The Oem Period key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemQuestion">
+            <summary>
+             The Oem Question key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem2">
+            <summary>
+             The Oem 2 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oemtilde">
+            <summary>
+             The Oem tilde key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem3">
+            <summary>
+             The Oem 3 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemOpenBrackets">
+            <summary>
+             The Oem Open Brackets key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem4">
+            <summary>
+             The Oem 4 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemPipe">
+            <summary>
+             The Oem Pipe key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem5">
+            <summary>
+             The Oem 5 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemCloseBrackets">
+            <summary>
+             The Oem Close Brackets key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem6">
+            <summary>
+             The Oem 6 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemQuotes">
+            <summary>
+             The Oem Quotes key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem7">
+            <summary>
+             The Oem 7 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem8">
+            <summary>
+             The Oem8 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemBackslash">
+            <summary>
+             The Oem Backslash key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Oem102">
+            <summary>
+             The Oem 102 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.ProcessKey">
+            <summary>
+             The PROCESS KEY key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Packet">
+            <summary>
+             The Packet KEY key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Attn">
+            <summary>
+             The ATTN key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Crsel">
+            <summary>
+             The CRSEL key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Exsel">
+            <summary>
+             The EXSEL key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.EraseEof">
+            <summary>
+             The ERASE EOF key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Play">
+            <summary>
+             The PLAY key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Zoom">
+            <summary>
+             The ZOOM key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.NoName">
+            <summary>
+             A constant reserved for future use.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Pa1">
+            <summary>
+             The PA1 key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.OemClear">
+            <summary>
+             The CLEAR key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Shift">
+            <summary>
+             The SHIFT modifier key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Control">
+            <summary>
+             The  CTRL modifier key.
+            </summary>
+        </member>
+        <member name="F:EdgeSharp.Interop.User32.Keys.Alt">
+            <summary>
+             The ALT modifier key.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Interop.User32.SW">
+            <summary>
+             Show window flags for <see cref="M:EdgeSharp.Interop.User32.ShowWindow(System.IntPtr,EdgeSharp.Interop.User32.SW)"/> and
+             <see cref="!:Shell32.ShellExecuteW(IntPtr, string, string, string, string, User32.SW)"/>
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Interop.User32.ColorFromArgbDword(System.UInt32)">
+            <summary>Convert a native integer that represent a color with an alpha channel into a Color struct.</summary>
+            <param name="color">The integer that represents the color.  Its bits are of the format 0xAARRGGBB.</param>
+            <returns>A Color representation of the parameter.</returns>
+        </member>
+        <member name="T:EdgeSharp.Interop.User32.WPF">
+            <summary>
+             Window placement flags for <see cref="T:EdgeSharp.Interop.User32.WINDOWPLACEMENT"/>.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Interop.User32.WS">
+            <summary>
+             Window styles
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Interop.User32.WS_EX">
+            <summary>
+             Extended Window Styles
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Interop.BOOL">
+            <summary>
+             Blittable version of Windows BOOL type. It is convenient in situations where
+             manual marshalling is required, or to avoid overhead of regular bool marshalling.
+            </summary>
+            <remarks>
+             Some Windows APIs return arbitrary integer values although the return type is defined
+             as BOOL. It is best to never compare BOOL to TRUE. Always use bResult != BOOL.FALSE
+             or bResult == BOOL.FALSE .
+            </remarks>
+        </member>
+        <member name="P:EdgeSharp.Interop.OsVersion.IsWindows10_1607OrGreater">
+            <summary>
+             Is Windows 10 Anniversary Update or later. (Redstone 1, build 14393, version 1607)
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Interop.OsVersion.IsWindows10_1703OrGreater">
+            <summary>
+             Is Windows 10 Creators Update or later. (Redstone 2, build 15063, version 1703)
+            </summary>
+        </member>
+        <member name="P:EdgeSharp.Interop.OsVersion.IsWindows8_1OrGreater">
+            <summary>
+             Is Windows 8.1 or later.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Interop.PARAM">
+            <summary>
+             Helpers for creating W/LPARAM arguments for messages.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Interop.PARAM.ToInt(System.IntPtr)">
+            <summary>
+             Hard casts to <see langword="int" /> without bounds checks.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Interop.PARAM.ToUInt(System.IntPtr)">
+            <summary>
+             Hard casts to <see langword="uint" /> without bounds checks.
+            </summary>
+        </member>
+        <member name="M:EdgeSharp.Interop.PARAM.ToLong(System.IntPtr)">
+            <summary>
+             Hard casts to <see langword="long" /> without bounds checks.
+            </summary>
+            <remarks>
+             Technically not needed, but here for completeness.
+            </remarks>
+        </member>
+        <member name="M:EdgeSharp.Interop.PARAM.ToULong(System.IntPtr)">
+            <summary>
+             Hard casts to <see langword="ulong" /> without bounds checks.
+            </summary>
+        </member>
+        <member name="T:EdgeSharp.Interop.POINT">
+            <summary>
+            Represetns the point structure.
+            </summary>
+        </member>
+    </members>
+</doc>
