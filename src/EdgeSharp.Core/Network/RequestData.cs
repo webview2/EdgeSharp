@@ -65,7 +65,7 @@ namespace EdgeSharp.Core.Network
             {
                 return new Uri(requestUrl);
             }
-            catch {}
+            catch { }
 
             try
             {
@@ -79,7 +79,7 @@ namespace EdgeSharp.Core.Network
                 var wellFormedUrl = $"{dummyScheme}://{dummyHost}{requestUrl}";
                 return new Uri(wellFormedUrl);
             }
-            catch {}
+            catch { }
 
             return null;
         }

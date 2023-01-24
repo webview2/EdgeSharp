@@ -34,13 +34,13 @@ namespace EdgeSharp.Tests.Defaults
 
                 foreach (var arg in commandLineArgs)
                 {
-                    Assert.True(browserArguments.Contains(arg.Key, System.StringComparison.InvariantCultureIgnoreCase));
-                    Assert.True(browserArguments.Contains(arg.Value, System.StringComparison.InvariantCultureIgnoreCase));
+                    Assert.Contains(arg.Key, browserArguments, System.StringComparison.InvariantCultureIgnoreCase);
+                    Assert.Contains(arg.Value, browserArguments, System.StringComparison.InvariantCultureIgnoreCase);
                 }
 
                 foreach (var opt in commandLineOpts)
                 {
-                    Assert.True(browserArguments.Contains(opt, System.StringComparison.InvariantCultureIgnoreCase));
+                    Assert.Contains(opt, browserArguments, System.StringComparison.InvariantCultureIgnoreCase);
                 }
             }
        }
